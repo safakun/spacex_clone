@@ -304,6 +304,14 @@ section {
     background-image: url('../images/falcon-9.webp');
 }
 
+.bg-falcon-heavy {
+    background-image: url('../images/falcon-heavy.webp');
+}
+
+.bg-dragon {
+    background-image: url('../images/dragon.webp');
+}
+
 .section-animate {
     animation: fadeIn 2s ease-in-out;
 }
@@ -315,6 +323,7 @@ section {
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     text-align: center;
+    width: 80%;
 }
 
 .section-inner-center h3 {
@@ -394,6 +403,10 @@ section {
     animation: fadeBounce 5s infinite;
 }
 
+.dark {
+    background: rgba(0, 0, 0, 0.8);
+}
+
 /* Animations */
 @keyframes fadeInUp {
     0% {
@@ -444,6 +457,10 @@ section {
     .mobile-only {
         display: block;
     }
+
+    .section-inner-center h3 {
+        font-size: 75px;
+    }
 }
 
 @media(max-width: 600px) {
@@ -470,6 +487,21 @@ section {
 
     .footer ul li {
         margin-right: 10px;
+    }
+
+  
+
+    .section-inner-center h3 {
+        font-size: 50px;
+    }
+
+    /* stats */
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats div {
+        margin-bottom: 20px;
     }
 
 }

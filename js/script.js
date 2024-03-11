@@ -4,13 +4,16 @@ const overlay = document.getElementById('overlay');
 const menu = document.getElementById('mobile-menu');
 const counters = document.querySelectorAll('.counter');
 
+const mainHeader = document.getElementById('main-header');
+
 let scrollStarted = false;
 
 btn.addEventListener('click', navToggle); 
 document.addEventListener('scroll', scrollPage);
+document.addEventListener('scroll', scrollPage);
 
 function navToggle() {
-    console.log(btn)
+   // console.log(btn)
     btn.classList.toggle('open');
     overlay.classList.toggle('overlay-show');
     document.body.classList.toggle('stop-scrolling');
@@ -23,6 +26,7 @@ function scrollPage() {
    // console.log(scrollPos);
    if (scrollPos > 100 && !scrollStarted) {
     countUp();
+    makeHeaderBlack();
     scrollStarted = true;
    } else if (scrollPos < 100 && scrollStarted) {
     reset();
@@ -65,5 +69,10 @@ function reset() {
     counters.forEach((counter) => counter.innerText = '0');
 }
 
-// countUp();
+
+
+function makeHeaderBlack() {
+    mainHeader.classList.add('dark');
+}
+
 
